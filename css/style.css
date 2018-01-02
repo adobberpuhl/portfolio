@@ -419,7 +419,7 @@ h3 {
 
 .sideBySide > img {
 	width: 49%;
-	height: auto;
+	height: 100%;
 }
 
 .verticalLine {
