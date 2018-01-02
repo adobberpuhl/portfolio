@@ -39,11 +39,12 @@ body {
 }
 
 .ham {
+	position: fixed;
+	right: 7.5%;
 	display: none;
 	width: 44px;
 	height: auto;
 	padding: 4px;
-
 	transition: .25s;
 	z-index: 15;
 }
@@ -53,7 +54,7 @@ body {
 }
 
 .menuLine {
-	//width: 100%;
+	/* //width: 100%; */
 	transition: .5s;
 }
 
@@ -120,8 +121,7 @@ body {
 
 .menu {
 	list-style-type: none;
-	
-	width: 47%;
+	padding-right: 8vw;
 	padding-top: 8vw;
 	display: flex;
 	flex-direction: column;
