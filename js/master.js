@@ -1,6 +1,6 @@
-$(window).load(function() {
+$(window).on('load', function() {
    $("section").each(function(index) {
-	    $(this).delay(400*index).slideDown(300);
+	    $(this).delay(400*index).fadeIn(300);
 	});
 });
 
