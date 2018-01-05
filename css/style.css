@@ -1,11 +1,14 @@
 body {
-	font-family: "futura-pt", sans-serif;
+	font-family: "Josefin Sans", "futura-pt", sans-serif;
 	font-size: 1em;
 	font-weight: 300;
+	margin: 0;
 }
 
 .head {
 	width: 100%;
+	padding-top:  4vw;
+	padding-bottom: 2vw;
 }
 
 .navBar {
@@ -39,8 +42,8 @@ body {
 }
 
 .ham {
-	position: fixed;
-	right: 7.5%;
+/* 	position: fixed;
+	right: 7.5%; */
 	display: none;
 	width: 44px;
 	height: auto;
@@ -77,16 +80,18 @@ body {
 .ham #menuBot {
 	border: 2px solid #999999;
 	border-top: none;
-	margin-top: 10px
+	margin-top: 10px;
 	top: 22px;
 }
 
 .buttonOpen #menuTop {
+
 	transform: translate(0px, 6px);
 	transition: .5s;
 	border: 1px solid #fff;
 }
 .buttonOpen #menuMid {
+
 	transform: translate(230px);
 	transition: .1s ease-in;
 	opacity: 0;
@@ -96,6 +101,11 @@ body {
 	transform: translate(0px, -6px);
 	transition: .5s;
 	border: 1px solid #fff;
+}
+
+.buttonOpen {
+	position: fixed;
+	right: 2em;
 }
 
 .nav {
@@ -121,7 +131,7 @@ body {
 
 .menu {
 	list-style-type: none;
-	padding-right: 8vw;
+	padding-right: 20%;
 	padding-top: 8vw;
 	display: flex;
 	flex-direction: column;
@@ -179,20 +189,61 @@ body {
 	justify-content: space-between;
 }
 
-.nav > a {
-	text-decoration: none;
-	color: #999999;
-	font-weight: 500;
-	font-size: 1.2em;
+.mainNav > li {
+	position: relative;
+	padding-top: .5vw;
+	padding-bottom: .5vw;
 }
 
-.nav > a:hover {
-	color: #3aafa9;
+.inactive::after {
+	content: "";
+    display: block;
+    height: 0.1em;
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 51%;
+	transform: translate(-50%);
+    background-image: linear-gradient(to right, transparent 50.3%, #3aafa9 50.3%);
+    transition: background-position .2s .1s ease-out;
+    background-size: 200% auto;
+}
+
+.inactive:hover::after {
+	background-position: -100% 0;
 }
 
 .selected {
 	color: #000;
 }
+
+.selected:hover {
+	color:  #000;
+}
+
+.selected::after {
+
+	content: "";
+    display: block;
+    height: 0.1em;
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 51%;
+	transform: translate(-50%);
+    background-image: linear-gradient(to right, transparent 50.3%, #000 50.3%);
+    background-position: -100% 0;
+    background-size: 200% auto;
+}
+
+.nav > a {
+	text-decoration: none;
+	color: #999999;
+	font-weight: 500;
+	font-size: 1.2em;
+
+}
+
 
 a {
 	text-decoration: none;
@@ -208,7 +259,7 @@ hr {
     display: block;
     height: 2px;
     border: 0;
-    border-top: 2px solid #999999;
+    border-top: 2px solid #3aafa9;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1vw;
@@ -238,15 +289,16 @@ hr {
 	margin-right: auto;
 }
 
+
 .work {
-	width: 85%;
+	/* width: 85%; */
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 1vw;
+	padding-top: 2vw;
 	padding-bottom: 0;
 }
 
@@ -255,9 +307,8 @@ hr {
 }
 
 .projectLink {
-	width: 26vw;
-	height: 26vw;
-	padding-bottom: 1vw;
+	width: 33.33vw;
+	height: 33.33vw;
 }
 
 .project {
@@ -338,13 +389,18 @@ hr {
 	margin-right: auto;
 	font-size: 1.2em;
 	font-weight: 500;
-	padding: 1vw;
+	padding-top: 4vw;
+	padding-bottom: 4vw;
 }
 
 
 .foot > p {
 	margin: 0;
 	color: #737373;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .foot > p > a {
@@ -362,8 +418,7 @@ hr {
 	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 1vw;
-	padding-bottom: 1vw;
+	padding: 2vw 0;
 }
 
 h3 {
@@ -431,30 +486,46 @@ h3 {
 /** RESPONSIVE STUFF **/
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
 
 	.mark {
 		width: auto;
 	}
 
+	.mainNav {
+		width: auto;
+		flex-direction: column;
+	}
+
+	.mainNav > li {
+		text-align: right;
+		padding-top: 1.2vw;
+	}
+
+	.mainNav > li > a {
+		position: relative;
+	}
+
 	.work {
-		padding-top: 3vw;
+		padding-top: 2vw;
 		padding-bottom: 1vw;
 	}
 
 	.projectLink {
-		width: 39vw;
-		height: 39vw;
-		padding-bottom: 2vw;
+		width: 50vw;
+		height: 50vw;
+		/* padding-bottom: 2vw; */
 	}
 
-	.mainNav {
+
+
+	/* .mainNav {
 		display: none;
 	}
 	
 	.ham, .nav {
 		display: block;
-	}
+	} */
 
 	.name {
 		font-size: 1.5em;
@@ -480,25 +551,77 @@ h3 {
 		padding-bottom: 1vw;
 	}
 
+	.foot {
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.foot > p {
+		flex-direction: column;
+		text-align: center;
+		width: 85%;
+	}
+
+	.foot > p > a {
+		width: 100%;
+		padding: .5vw;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+	.head {
+		padding-top: 6vw;
+	}
+
+	.navBar {
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+
+	.mainNav {
+		margin: 0 auto;
+		padding: 2vw 0;
+	}
+
+	.mainNav > li {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 450px) {
 	.projectLink {
-		width: 78vw;
-		height: 78vw;
+		width: 100vw;
+		height: 100vw;
 	}
 
+}
+
+@media only screen and (max-width: 350px) {
 	.name {
 		font-size: 1em;
 	}
 
-	.logo > a > img {
-		width: 28px;
-	}	
+	.mainNav {
+		font-size: 1em;
+		padding: 0;
+	}
+	
+	.mainNav > li {
+		padding-top: 2vw;
+	}
+
+	.projectPage {
+		padding: 4vw 0;
+	}
 
 	.foot {
 		font-size: 1em;
+
 	}
+
 }
 
 
