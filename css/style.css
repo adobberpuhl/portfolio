@@ -126,7 +126,7 @@ body {
 
 .menuShow {
     margin-right: 0;
-    //box-shadow: 4px 2px 15px 1px #B9ADAD;
+    box-shadow: 4px 2px 15px 1px #B9ADAD;
 }
 
 .menu {
@@ -291,9 +291,8 @@ hr {
 
 
 .work {
-	/* width: 85%; */
-	margin-left: auto;
-	margin-right: auto;
+	width: 100vw;
+	max-width: 100%;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
