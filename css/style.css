@@ -1,5 +1,7 @@
 body {
 	font-family: "Josefin Sans", "futura-pt", sans-serif;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: scroll;
 	font-size: 1em;
 	font-weight: 300;
 	margin: 0;
