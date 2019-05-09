@@ -3,14 +3,17 @@ body {
 	-webkit-overflow-scrolling: touch;
 	overflow-y: scroll;
 	font-size: 1em;
+	line-height: 1.2;
 	font-weight: 300;
 	margin: 0;
 }
 
 .head {
 	width: 100%;
-	padding-top:  4vw;
-	padding-bottom: 2vw;
+	max-width: 1600px;
+	padding: 1rem 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .navBar {
@@ -21,13 +24,13 @@ body {
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 2vw;
-	padding-bottom: 1vw;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
 }
 
 .name {
 	font-size: 2em;
-	margin: auto 1vw;
+	margin: auto .5rem;
 	width: 85%;
 	font-weight: 500;
 }
@@ -55,8 +58,6 @@ body {
 
 .mainNav > li {
 	position: relative;
-	padding-top: .5vw;
-	padding-bottom: .5vw;
 }
 
 .inactive::after {
@@ -101,8 +102,12 @@ body {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #737373;
+}
+
+.navBar a {
+	text-decoration: none;
 }
 
 a:hover {
@@ -111,14 +116,15 @@ a:hover {
 
 hr {
 	width: 85%;
+	max-width: 1600px;
     display: block;
     height: 2px;
     border: 0;
     border-top: 2px solid #3aafa9;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 
 }
 
@@ -128,32 +134,22 @@ hr {
 
 .sliderImage {
 	width: 85%;
-	margin-top: 2vw;
+	margin-top: 1rem;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.headImage {
-
-	background-position: top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	height: 25vw;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 
 .work {
 	width: 100%;
-	
+	max-width: 1600px;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 2vw;
+	padding-top: 1rem;
 	padding-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .work > p {
@@ -183,6 +179,7 @@ hr {
 	padding: 0;
 	margin: 0 auto;
 	font-weight: 500;
+	line-height: 1.3;
 	width: 100%;
 	text-align: center;
 	color: #000;
@@ -190,15 +187,13 @@ hr {
 }
 
 .description > p {
-	padding: 0;
+	padding: 0 .5rem;
 	margin: 0 auto;
-
 }
 
 .type {
 	font-family: "proxima-nova", sans-serif;
 	font-style: italic;
-	
 }
 
 .projectDesc {
@@ -237,14 +232,17 @@ hr {
 
 .foot {
 	width:  85%;
+	max-width: 1600px;
 	display: flex;
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 1.2em;
 	font-weight: 500;
-	padding-top: 4vw;
-	padding-bottom: 4vw;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -270,14 +268,23 @@ hr {
 
 .projectPage {
 	width: 85%;
+	max-width: 1600px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 2vw 0;
+	padding: 1.5rem 0;
 }
 
-h3 {
+h1 {
 	margin: 0 auto;
 	font-size: 1.5em;
+}
+
+h2 {
+	margin: 0 auto;
+	font-family: "Josefin Sans", "futura-pt", sans-serif;
+	font-weight: 300;
+	font-size: 1.3em;
+	color: #3aafa9;
 }
 
 .projectBody {
@@ -289,20 +296,19 @@ h3 {
 }
 
 .projectBody > p {
-	padding-top: 1vw;
+	padding-top: 1rem;
 	margin: 0;
 }
 
 .projectBody > img {
 	width: 100%;
 	height: auto;
-	padding-top: 1vw;
-	
+	padding-top: 1rem;
 }
 
 .projectDetails {
 	width: 100%;
-
+	max-width: 700px;
 }
 
 .projectImages {
@@ -311,18 +317,18 @@ h3 {
 
 .projectImages > img {
 	width: 100%;
-	padding-top: 1vw;
+	padding-top: 1rem;
 }
 
 .projectImages > p {
-	padding-top: 1vw;
+	padding-top: 1rem;
 	margin: 0 auto;
 }
 
 .sideBySide {
 	display: flex;
 	flex-direction: row;
-	padding-top: 1vw;
+	padding-top: 1rem;
 	justify-content: space-between;
 }
 
@@ -332,16 +338,112 @@ h3 {
 }
 
 .verticalLine {
-	margin-left: 1vw;
-	margin-right: 1vw;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	border-left: 2px solid #3aafa9;
 }
+
+.project-column {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.project-column-mobile {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.column-is-half {
+	width: 48%;
+}
+
+.column-is-2 {
+	width: 18%;
+}
+
+.column-is-8 {
+	width: 78%;
+}
+
+.column-is-8 p {
+	margin-top: 0;
+} 
+
+.column-is-half img, .column-is-2 img, .column-is-8 img {
+	width: 100%;
+	height: auto;
+} 
+
+.subtitle {
+	margin-bottom: .75rem;
+}
+
+.list-element {
+	margin-bottom: .75rem;
+}
+
+.ux-process {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.process-element {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	width: 30%;
+}
+
+.element-description {
+	margin-bottom: .75rem;
+}
+
+.mobile-set-image-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.mobile-set-image {
+	width: 30%;
+}
+
+.mobile-set-image img {
+	width: 100%;
+	height: auto;
+}
+
+.set-caption {
+	font-size: .75rem;
+	text-align: center;
+}
+
+.mt-add-2 {
+	margin-top: 2rem;
+}
+
+.mobile-set-image-prototype {
+	margin-top: 1rem;
+}
+
 
 /** RESPONSIVE STUFFS **/
 
 
 @media only screen and (max-width: 850px) {
-
+	h1 {
+		padding-bottom: .75rem;
+	}
 	.mark {
 		width: auto;
 	}
@@ -362,14 +464,12 @@ h3 {
 	}
 
 	.work {
-		padding-top: 2vw;
-		padding-bottom: 1vw;
+		padding: 1rem 0 0;
 	}
 
 	.projectLink {
 		width: 50%;
 		height: 50%;
-
 	}
 
 	.name {
@@ -387,13 +487,13 @@ h3 {
 
 	.sideBySide > img {
 		width: 100%;
-		padding-bottom: 2vw;
+		padding-bottom: 1rem;
 	}
 
 	.projectDetails > p {
 		margin-top: 0;
 		margin-bottom: 0;
-		padding-bottom: 1vw;
+		padding-bottom: 1rem;
 	}
 
 	.foot {
@@ -411,14 +511,23 @@ h3 {
 
 	.foot > p > a {
 		width: 100%;
-		padding: .5vw;
+		padding: .5rem;
 	}
-
+	.column-is-2 {
+		width: 28%;
+	}
+	
+	.column-is-8 {
+		width: 68%;
+	}
+	.project-column-mobile {
+		margin-top: 0;
+	}
 }
 
 @media only screen and (max-width: 540px) {
 	.head {
-		padding-top: 6vw;
+		padding-top: 1rem;
 	}
 
 	.navBar {
@@ -428,13 +537,35 @@ h3 {
 
 	.mainNav {
 		margin: 0 auto;
-		padding: 1.5rem 0;
+		padding: 1rem 0 0;
 		flex-direction: row;
 		width: 100%;
 	}
 
 	.mainNav > li {
 		text-align: center;
+	}
+	.column-is-half {
+		width: 100%;
+		margin-bottom: .75rem;
+	}
+
+	.project-column {
+		flex-direction: column;
+		width: 100%;
+	}
+	.ux-process {
+		flex-direction: column;
+	}
+	.process-element {
+		width: 100%;
+	}
+	.column-is-2 {
+		width: 48%;
+	}
+	
+	.column-is-8 {
+		width: 48%;
 	}
 }
 
@@ -444,6 +575,19 @@ h3 {
 		height: 100%;
 	}
 
+	.project-column-mobile {
+		flex-direction: column;
+	}
+
+	.column-is-2 {
+		width: 100%;
+	}
+	.column-is-8 {
+		width: 100%;
+	}
+	.column-is-8 p {
+		margin-top: 1rem;
+	}
 }
 
 @media only screen and (max-width: 350px) {
@@ -461,17 +605,18 @@ h3 {
 	}
 	
 	.mainNav > li {
-		padding-top: 2vw;
+		padding-top: 1rem;
 	}
 
 	.projectPage {
-		padding: 4vw 0;
+		padding: 1.5rem 0;
 	}
 
 	.foot {
 		font-size: 1em;
 		padding: 1.5rem 0;
 	}
+
 }
 
 
