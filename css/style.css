@@ -423,8 +423,11 @@ h2 {
 	height: auto;
 }
 
-.set-caption {
+.caption {
 	font-size: .75rem;
+}
+
+.txt-center {
 	text-align: center;
 }
 
@@ -434,6 +437,16 @@ h2 {
 
 .mobile-set-image-prototype {
 	margin-top: 1rem;
+}
+
+.full-width-image-wrapper {
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.full-width-image-wrapper img {
+	width: 100%;
+	height: auto;
 }
 
 
